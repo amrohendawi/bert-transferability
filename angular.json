@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "data-science-portfolio-template": {
+    "scientific-article-website": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -55,19 +55,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "data-science-portfolio-template:build",
+            "browserTarget": "scientific-article-website:build",
             "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "data-science-portfolio-template:build:production"
+              "browserTarget": "scientific-article-website:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "data-science-portfolio-template:build"
+            "browserTarget": "scientific-article-website:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         }
       }
     },
-    "data-science-portfolio-template-e2e": {
+    "scientific-article-website-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -109,11 +109,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "data-science-portfolio-template:serve"
+            "devServerTarget": "scientific-article-website:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "data-science-portfolio-template:serve:production"
+              "devServerTarget": "scientific-article-website:serve:production"
             }
           }
         },
@@ -129,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "data-science-portfolio-template"
+  "defaultProject": "scientific-article-website"
 }

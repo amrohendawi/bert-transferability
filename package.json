@@ -1,5 +1,5 @@
 {
-  "name": "data-science-portfolio-template",
+  "name": "scientific-article-website",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -98,13 +98,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zachalexander/data-science-portfolio-template.git"
+    "url": "git+https://github.com/zachalexander/scientific-article-website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zachalexander/data-science-portfolio-template/issues"
+    "url": "https://github.com/zachalexander/scientific-article-website/issues"
   },
-  "homepage": "https://github.com/zachalexander/data-science-portfolio-template#readme"
+  "homepage": "https://github.com/zachalexander/scientific-article-website#readme"
 }

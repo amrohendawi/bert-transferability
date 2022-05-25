@@ -7,10 +7,10 @@ Hello! Thanks for your interest in this custom Data Science Portfolio Template. 
 * You'll also need to download the Angular Command Line Interface (CLI) after installing npm. Run ```npm i @angular/cli``` to install the interface.
 
 ### Clone the repository
-* On your local computer, clone this repository by running ```git clone https://github.com/zachalexander/data-science-portfolio-template.git```.  
+* On your local computer, clone this repository by running ```git clone https://github.com/zachalexander/scientific-article-website.git```.  
 
 ### Run npm install
-* Then, to download all of the necessary node modules, run ```npm install``` inside of the 'data-science-portfolio-template' directory.  
+* Then, to download all of the necessary node modules, run ```npm install``` inside of the 'scientific-article-website' directory.  
 
 ### Run the application locally
 * Run ```npm start``` to compile the code and run the application locally. After it starts up, you can go to 'http://localhost:4200' to develop locally.

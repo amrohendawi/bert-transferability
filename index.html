@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Article: Unraveling Transferability of BERT</title>
+	<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto" rel="stylesheet">
+	<meta name="viewport" content="width=700">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<nav class="toc">
+		<ul>
+			<li><a href="#intro">Abstract</a></li>
+			<li><a href="#introduction">Introduction</a></li>
+			<li>
+				<a href="#dev">Factors</a>
+				<ul>
+					<li><a href="#dev-edit-html">Fine-tuning</a></li>
+					<li><a href="#dev-element-classes">Dataset</a></li>
+					<li><a href="#dev-slide-classes">Task Similarity</a></li>
+					<li><a href="#dev-export-html">Embeddings Quality</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#css">CSS Editor</a>
+				<ul>
+					<li><a href="#css-fonts">Custom Fonts</a></li>
+					<li><a href="#css-developer-mode">Developer Mode</a></li>
+					<li><a href="#css-examples">Examples</a></li>
+				</ul>
+			</li>
+		</ul>
+		<svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+			<path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000"
+				stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+		</svg>
+	</nav>
+
+	<article class="contents">
+		<section id="intro">
+			<h1>Unraveling Transferability of BERT</h1>
+			<h2>Abstract</h2>
+			<p>
+				In this article, we investigate the factors affecting the transferability of a BERT model trained on
+				general natural language understanding to downstream, more specific tasks. These factors include number
+				of layers, number of fine-tuning epochs, dataset size, and label noise.
+				We find that, in general, a shallower BERT model transfers better than a deeper model, and that a model
+				trained with more data and for more epochs transfers better than a model trained with less data and for
+				fewer epochs. We also find that label noise has a negative effect on transferability.
+			</p>
+		</section>
+
+		<section id="introduction">
+			<h2>Introduction</h2>
+		</section>
+		<p>
+			Since their introduction in 2017, Transformers (Vaswani et al., 2017) have taken NLP by storm, offering
+			enhanced parallelization and better modeling of long-range dependencies. The best known Transformer-based
+			model is BERT (Devlin et al., 2019); it obtained state-of-the-art results in numerous benchmarks and is
+			still a must-have baseline.
+
+		</p>
+		<p>
+			BERT is a deep learning model that has been shown to be effective for a range of natural language
+			understanding tasks. However, it is not clear how well BERT transfers to more specific tasks. In this
+			article, we investigate the factors that affect the transferability of BERT. These factors include the
+			number of layers, the number of fine-tuning epochs, the dataset size, and the label noise.
+		</p>
+		We first consider the linguistic aspects of it, such as the number of layers, the number of fine-tuning epochs,
+		and the dataset size. We find that, in general, a shallower BERT model transfers better than a deeper model, and
+		that a model trained with more data and for more epochs transfers better than a model trained with less data and
+		for fewer epochs.
+		We also consider the effect of label noise on transferability. We find that label noise has a negative effect on
+		transferability.
+		</p>
+		<p>
+			In conclusion, we find that the transferability of BERT is affected by a number of factors, including the
+			number of layers, the number of fine-tuning epochs, the dataset size, and the label noise.
+		</p>
+		<section>
+			<div id="dev">
+				<h2>Factors</h2>
+				<p>
+					In this section we discuss the main factors that affect the transferability of BERT. These factors
+					are the number of layers, the number of fine-tuning epochs, the dataset size, and the label noise.
+				</p>
+			</div>
+
+			<div id="dev-edit-html">
+				<h3>Fine-tuning</h3>
+				<p>
+					The per-slide HTML editor can be accessed from the slide options area. It gives you raw access to
+					the current slide's HTML, allowing you to change anything you like. Note that some elements, such as
+					&lt;script&gt; and &lt;link&gt;, are not allowed for security reasons.﻿
+				</p>
+			</div>
+
+			<div id="dev-element-classes">
+				<h3>Dataset</h3>
+				<p>
+					As a paying Slides customer you have access to the <a href="#css">CSS editor</a> which allows you to
+					add custom styles to your deck. By turning on the developer mode a new "class name" field will
+					appear for any block that you focus. This allows you to easily target a specific element with your
+					CSS.
+				</p>
+				<p>
+					Here's an example that defines an "upside-down" class using custom CSS and applies it to a text
+					block.
+				</p>
+				<pre class="code-block" data-highlight-theme="github-gist"><code class="hljs css">.upside-down {
+						transform: scale( 1, -1 );
+					}</code></pre>
+			</div>
+
+			<div id="dev-slide-classes">
+				<h3>Task Similarity<a href="/pricing" class="header-secondary-text">(Requires Pro)</a></h3>
+				<p>
+					Just like you can add custom classes to individual elements it's also possible to add custom classes
+					at the slide level. This can used to apply broader changes to the whole slide like inverting text
+					and icon colors or changing the slide transition.
+				</p>
+				<img class="developer-image"
+					src="https://static.slid.es.s3.amazonaws.com/site/developers/slides-developer-mode-4.png">
+				<p>
+					Under the hood the slide background element is separate from the slide itself. Here are two examples
+					showing how you'd target the slide contents or slide background using a custom class called
+					"night-sky":
+				</p>
+
+				<pre class="code-block" data-highlight-theme="github-gist"><code class="hljs css">// Targets the slide contents
+.slides .night-sky svg path {
+    fill: yellow;
+}
+
+// Target the slide background
+.backgrounds .night-sky {
+    background: linear-gradient(0deg, #141528, #0b1bb2);
+}</code></pre>
+
+				<img class="developer-image"
+					src="https://static.slid.es.s3.amazonaws.com/site/developers/slides-developer-mode-5.png">
+			</div>
+
+			<div id="dev-export-html">
+				<h3>Embeddings Quality</h3>
+				<p>
+					You can access the complete HTML for all slides in your deck ﻿inside of the export panel, under
+					"Export to reveal.js"﻿. This provides a way of exporting your deck markup and the core Slides styles
+					to reveal.js. There are a few limitations with exporting this way but it should provide a good
+					starting point.
+				</p>
+
+				<img class="developer-image"
+					src="https://static.slid.es.s3.amazonaws.com/site/developers/slides-developer-mode-6.png">
+			</div>
+
+		</section>
+
+		<section>
+			<div id="css">
+				<h2>CSS Editor <a href="/pricing" class="header-secondary-text">(Requires Pro)</a></h2>
+				<p>
+					The CSS editor lets you author custom styles for your presentation with a real-time preview of the
+					result. It's available as an option inside of the Style panel of the presentation editor.
+				</p>
+				<p>
+					The editor preprocesses styles using <a href="http://lesscss.org/">LESS</a>, though you're free to
+					write plain CSS as well. We apply the styles in real-time as you type so there's no need to leave
+					the editor or even press a refresh button to see what you're getting. Note that when your styles are
+					saved they will be automatically wrapped in a ".reveal {}" selector to avoid conflicts with other
+					page styles.
+				</p>
+			</div>
+			<div id="css-fonts">
+				<h3>Custom Fonts</h3>
+				<p>
+					You can load custom fonts from Typekit and Google fonts and apply them using custom CSS. <a
+						href="http://help.slides.com/knowledgebase/articles/1077976-custom-fonts-pro">Find out more</a>.
+				</p>
+			</div>
+			<div id="css-developer-mode">
+				<h3>Developer Mode</h3>
+				<p>
+					If you turn on the <a href="#dev">developer mode</a> you can also add custom classes to any focused
+					element. This is a convenient way to easily apply your CSS to specific elements.
+				</p>
+			</div>
+
+			<div id="css-examples">
+				<h3>Examples</h3>
+				<pre class="code-block" data-highlight-theme="github-gist"><code class="hljs css">// Change presentation background
+&amp; {
+    background: #a83239;
+}
+
+// Change color of body text
+.slides {
+    color: #009999;
+}
+
+// Turn text white if the slide has a dark background
+.has-dark-background {
+    color: #fff;
+}
+
+// Add a blue border to all slides (each slide is a &lt;section&gt;)
+.slides section {
+    outline: 1px solid blue;
+}
+
+// Add a red border to all vertical stacks of slides
+.slides section.stack {
+    outline: 1px solid red;
+}<br>
+// Include a custom font<br>@font-face {<br>&nbsp; font-family: "Cabin Sketch";<br>&nbsp; src: url("https://s3.amazonaws.com/static.slid.es/fonts/cabinsketch/cabinsketch-regular.woff") format("woff"),<br>&nbsp; &nbsp; &nbsp; &nbsp;url("https://s3.amazonaws.com/static.slid.es/fonts/cabinsketch/cabinsketch-regular.ttf") format("truetype");<br>}
+<br>.slides h1, .slides h2, .slides h3 {<br>&nbsp; &nbsp; font-family: "Cabin Sketch";<br>}
+
+
+// Change color of controls and progress bar
+﻿@interactiveColor: rgb(200,105,119);
+
+.progress span {
+    background: @interactiveColor !important;
+}
+
+.controls .navigate-left {
+    border-right-color: @interactiveColor !important;
+}
+.controls .navigate-right {
+    border-left-color: @interactiveColor !important;
+}
+.controls .navigate-up {
+    border-bottom-color: @interactiveColor !important;
+}
+.controls .navigate-down {
+    border-top-color: @interactiveColor !important;
+}</code></pre>
+			</div>
+
+		</section>
+	</article>
+	<!-- partial -->
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
